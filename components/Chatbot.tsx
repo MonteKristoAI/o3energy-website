@@ -53,7 +53,11 @@ export function Chatbot({ placeholderQA = [] }: { placeholderQA?: { q: string; a
               <div className="flex flex-col gap-2 mt-4">
                 <span className="text-xs text-text-2 uppercase font-semibold tracking-wider">Suggested questions</span>
                 {qa.map((item, idx) => (
-                  <button key={idx} className="text-left bg-bg-white border border-border p-3 rounded-xl text-sm hover:border-brand-orange hover:text-brand-orange transition-colors" onClick={() => {}}>
+                  <button 
+                    key={idx} 
+                    className="text-left bg-bg-white border border-border p-3 rounded-xl text-sm hover:border-brand-orange hover:text-brand-orange transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1" 
+                    onClick={() => {}}
+                  >
                     {item.q}
                   </button>
                 ))}
@@ -62,8 +66,20 @@ export function Chatbot({ placeholderQA = [] }: { placeholderQA?: { q: string; a
           </div>
           <div className="pt-4 border-t border-border mt-auto">
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input type="text" placeholder="Type a message..." className="flex-1 rounded-full border border-border px-4 py-2 text-sm focus:outline-none focus:border-brand-orange bg-bg-white" disabled />
-              <Button type="button" size="icon" className="rounded-full bg-brand-primary hover:bg-brand-primary/90 text-white shrink-0" disabled>
+              <input 
+                type="text" 
+                placeholder="Type a message..." 
+                aria-label="Ask a question"
+                className="flex-1 rounded-full border border-border px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1 bg-bg-white" 
+                disabled 
+              />
+              <Button 
+                type="button" 
+                size="icon" 
+                className="rounded-full bg-brand-primary hover:bg-brand-primary/90 text-white shrink-0" 
+                aria-label="Send message"
+                disabled
+              >
                 <MessageCircle className="h-4 w-4" />
               </Button>
             </form>

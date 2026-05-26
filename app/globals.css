@@ -45,10 +45,10 @@
   /* 3. Text tokens */
   --color-text-primary: #1D1F28;
   --color-text-secondary: #52525B;
-  --color-text-muted: #71717A;
+  --color-text-muted: #5E5E66;
   --color-text-inverse: #FFFFFF;
   --color-link: #022240;
-  --color-link-hover: #F36E20;
+  --color-link-hover: #E15B16;
 
   /* 4. Border/shadow/effects tokens */
   --color-border: #E4E2DC;
@@ -60,7 +60,7 @@
   --shadow-floating: 0 20px 50px -12px rgba(2, 34, 64, 0.15);
   --glow-primary: rgba(243, 110, 32, 0.15);
   --glow-subtle: rgba(2, 34, 64, 0.05);
-  --focus-ring: #F36E20;
+  --focus-ring: #E15B16;
 
   /* 5. Layout tokens */
   --nav-background: rgba(255, 255, 255, 0.95);
@@ -81,19 +81,19 @@
   --cta-overlay: linear-gradient(180deg, rgba(2, 34, 64, 0.62) 0%, rgba(10, 22, 40, 0.78) 100%);
 
   /* 7. Component tokens */
-  --button-primary-bg: #F36E20;
-  --button-primary-bg-hover: #E15B16;
+  --button-primary-bg: #E15B16;
+  --button-primary-bg-hover: #C54B0D;
   --button-primary-text: #FFFFFF;
   --button-secondary-bg: #FFFFFF;
   --button-secondary-border: #E4E2DC;
   --button-secondary-text: #022240;
   --badge-bg: rgba(243, 110, 32, 0.12);
   --badge-border: rgba(243, 110, 32, 0.28);
-  --badge-text: #F36E20;
+  --badge-text: #D55106;
   --input-bg: transparent;
   --input-border: #E4E2DC;
   --input-text: #1D1F28;
-  --input-placeholder: #A1A1AA;
+  --input-placeholder: #6B6D7A;
   --input-focus-border: #F36E20;
   --metric-color: #022240;
   --icon-color: #F36E20;
@@ -181,8 +181,8 @@
 
   /* 7. Component tokens */
   --button-primary-bg: #F97316;
-  --button-primary-bg-hover: #EA580C;
-  --button-primary-text: #FFFFFF;
+  --button-primary-bg-hover: #FB923C;
+  --button-primary-text: #020812;
   --button-secondary-bg: #0F1A2D;
   --button-secondary-border: rgba(56, 189, 248, 0.25);
   --button-secondary-text: #38BDF8;
@@ -192,7 +192,7 @@
   --input-bg: rgba(7, 14, 26, 0.6);
   --input-border: rgba(56, 189, 248, 0.2);
   --input-text: #F1F5F9;
-  --input-placeholder: #64748B;
+  --input-placeholder: #8496AE;
   --input-focus-border: #38BDF8;
   --metric-color: #38BDF8;
   --icon-color: #F97316;
@@ -287,11 +287,11 @@
   --button-secondary-text: #11252D;
   --badge-bg: rgba(82, 126, 130, 0.08); /* muted sage/teal */
   --badge-border: rgba(82, 126, 130, 0.22);
-  --badge-text: #527E82; /* muted sage/teal secondary accent */
+  --badge-text: #3F676B; /* muted sage/teal secondary accent */
   --input-bg: transparent;
   --input-border: #E2DCCE;
   --input-text: #1B2A32;
-  --input-placeholder: #7E8C94;
+  --input-placeholder: #5B6972;
   --input-focus-border: #C25E3A;
   --metric-color: #11252D;
   --icon-color: #C25E3A;

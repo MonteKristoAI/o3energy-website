@@ -53,6 +53,7 @@ export function ThemeSwitcher() {
                 key={t.id}
                 onClick={() => setTheme(t.id)}
                 aria-pressed={isActive}
+                aria-label={`Switch to ${t.label} theme`}
                 className={cn(
                   'text-[10px] tracking-wider uppercase font-semibold px-3 py-1.5 rounded-full transition-all duration-200 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                   isActive
