@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-brand-primary: #022240;
+  --color-brand-dark: #0A1628;
+  --color-brand-orange: #F36E20;
+  --color-accent-coral: #E15B16;
+  --color-accent-peach: #F7C29A;
+  --color-success: #2D6A4F;
+
+  /* Surfaces */
+  --color-bg-cream: #F7F4EE;
+  --color-bg-white: #FFFFFF;
+
+  /* Text */
+  --color-text-1: #1D1F28;
+  --color-text-2: #52525B;
+
+  /* Borders */
+  --color-border: #E4E2DC;
+  --color-border-strong: #C7C4BD;
+
+  /* Danger / form */
+  --color-danger: #B91C1C;
+
+  /* shadcn primitives (Select / Accordion / Dialog popover content) */
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1D1F28;
+  --color-muted: #F7F4EE;
+  --color-muted-foreground: #52525B;
+  --color-accent: #FFF1E6;
+  --color-accent-foreground: #022240;
+  --color-input: #E4E2DC;
+  --color-ring: #F36E20;
+  --color-destructive: #B91C1C;
+  --color-secondary: #F7F4EE;
+  --color-secondary-foreground: #022240;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1D1F28;
+  --color-primary: #022240;
+  --color-primary-foreground: #FFFFFF;
+  --color-foreground: #1D1F28;
+  --color-background: #F7F4EE;
+
+  /* Typography variables */
+  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply bg-bg-cream text-text-1 font-body;
+    text-wrap: pretty;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-brand-primary;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-coral);
+    color: white;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-brand-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .text-metric {
+    @apply font-display font-extrabold tabular-nums;
+    font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  /*
+   * Eyebrow chip — glossy pill used above every section headline.
+   * `display: inline-flex !important` overrides legacy `block` Tailwind class on existing eyebrow
+   * spans so the pill shape is preserved everywhere without page-by-page rewrites.
+   * Translucent fill + border + backdrop-blur lets the chip read on both light and dark surfaces.
+   */
+  .text-eyebrow {
+    display: inline-flex !important;
+    align-items: center;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    border-radius: 9999px;
+    padding: 0.45rem 0.85rem;
+    color: var(--color-brand-orange);
+    background-color: color-mix(in srgb, var(--color-brand-orange) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-brand-orange) 28%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    width: fit-content;
+    max-width: fit-content;
+    /* Subtle glossy highlight for premium feel */
+    box-shadow:
+      inset 0 1px 0 0 color-mix(in srgb, var(--color-brand-orange) 18%, transparent),
+      0 1px 2px 0 rgba(2, 34, 64, 0.06);
+  }
+
+  .duotone-hero {
+    filter: grayscale(1) contrast(1.05);
+    position: relative;
+  }
+
+  .duotone-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgb(2 34 64 / 0.55) 0%, rgb(243 110 32 / 0.25) 100%);
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  /* Section background image with brand overlay (used on about Why-O3, partners Submit, etc.) */
+  .section-bg-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(2 34 64 / 0.92) 0%, rgb(10 22 40 / 0.88) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .section-bg-overlay-light::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(247 244 238 / 0.92) 0%, rgb(247 244 238 / 0.88) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @keyframes counter-fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Leaflet CSS import — required for the locations interactive map */
+@import 'leaflet/dist/leaflet.css';
+
+/* Custom Leaflet pin styling so pins use our orange brand */
+.leaflet-container {
+  background: #E4E2DC;
+  font-family: var(--font-body);
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FFFFFF;
+  color: #1D1F28;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px -8px rgba(2, 34, 64, 0.4);
+}
+
+.leaflet-popup-tip {
+  background: #FFFFFF;
+}
+
+.o3-marker {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
