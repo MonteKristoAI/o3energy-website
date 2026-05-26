@@ -620,6 +620,268 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
 }
 
 /* ============================================================
+   🎨 PHASE 12: SENIOR VISUAL ART DIRECTION OVERRIDES
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. O3 CLASSIC (COMMERCIAL POWER & EPC SOLIDER LOOK)
+   ------------------------------------------------------------ */
+
+/* Card Shadows & Elevation Polish */
+[data-theme="o3-classic"] .shadow-card,
+[data-theme="o3-classic"] .shadow-sm,
+[data-theme="o3-classic"] .shadow-md,
+[data-theme="o3-classic"] .shadow-lg,
+[data-theme="o3-classic"] div.rounded-xl.border.bg-bg-white,
+[data-theme="o3-classic"] div.rounded-2xl.border.bg-bg-white {
+  background-color: #FFFFFF !important;
+  border-color: #E4E2DC !important;
+  box-shadow: 0 12px 30px -10px rgba(2, 34, 64, 0.05), 0 1px 3px rgba(0, 0, 0, 0.01) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease !important;
+}
+
+[data-theme="o3-classic"] .shadow-card-hover:hover,
+[data-theme="o3-classic"] .hover\:shadow-lg:hover,
+[data-theme="o3-classic"] div.rounded-xl.border.bg-bg-white:hover,
+[data-theme="o3-classic"] div.rounded-2xl.border.bg-bg-white:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 20px 40px -15px rgba(2, 34, 64, 0.09), 0 2px 6px rgba(2, 34, 64, 0.02) !important;
+  border-color: #C7C4BD !important;
+}
+
+/* Solar Orange Primary Buttons Polish */
+[data-theme="o3-classic"] button.bg-brand-orange,
+[data-theme="o3-classic"] .bg-brand-orange {
+  background-color: #F36E20 !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(243, 110, 32, 0.22) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[data-theme="o3-classic"] button.bg-brand-orange:hover,
+[data-theme="o3-classic"] .bg-brand-orange:hover {
+  background-color: #E15B16 !important;
+  box-shadow: 0 6px 18px rgba(243, 110, 32, 0.32) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme="o3-classic"] button.bg-brand-orange:active,
+[data-theme="o3-classic"] .bg-brand-orange:active {
+  transform: translateY(1px) !important;
+  box-shadow: 0 2px 6px rgba(243, 110, 32, 0.2) !important;
+}
+
+/* Elegant Nav Link Micro-Interaction */
+@media (min-width: 1024px) {
+  [data-theme="o3-classic"] header nav a {
+    position: relative;
+  }
+  [data-theme="o3-classic"] header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F36E20;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  [data-theme="o3-classic"] header nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+/* ------------------------------------------------------------
+   2. GRIDLINE NIGHT (CYBER SOLAR COMMAND CENTER)
+   ------------------------------------------------------------ */
+
+/* Cyber Grid telemetry background */
+[data-theme="gridline-night"] body,
+[data-theme="gridline-night"] .bg-bg-cream {
+  background-color: #070E1A !important;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.02) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+  background-attachment: fixed !important;
+}
+
+/* Technical Card Depth, High-Tech Grid Outlines & Subtle Glows */
+[data-theme="gridline-night"] .shadow-card,
+[data-theme="gridline-night"] .shadow-sm,
+[data-theme="gridline-night"] .shadow-md,
+[data-theme="gridline-night"] .shadow-lg,
+[data-theme="gridline-night"] div.rounded-xl.border.bg-bg-white,
+[data-theme="gridline-night"] div.rounded-2xl.border.bg-bg-white {
+  background-color: #0F1A2D !important; /* Deep surface */
+  border: 1px solid rgba(56, 189, 248, 0.12) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 rgba(255, 255, 255, 0.02) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease !important;
+  position: relative;
+}
+
+/* Restrained Glowing Top Accent Line on Gridline cards */
+[data-theme="gridline-night"] .shadow-card::before,
+[data-theme="gridline-night"] div.rounded-xl.border.bg-bg-white::before,
+[data-theme="gridline-night"] div.rounded-2xl.border.bg-bg-white::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0), rgba(56, 189, 248, 0.35), rgba(56, 189, 248, 0)) !important;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+[data-theme="gridline-night"] .shadow-card-hover:hover,
+[data-theme="gridline-night"] .hover\:shadow-lg:hover,
+[data-theme="gridline-night"] div.rounded-xl.border.bg-bg-white:hover,
+[data-theme="gridline-night"] div.rounded-2xl.border.bg-bg-white:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7), 0 0 18px rgba(56, 189, 248, 0.08) !important;
+}
+
+/* RESTRICTION: Glow Discipline. Subtle glowing metrics text shadow */
+[data-theme="gridline-night"] .shadow-card .text-metric,
+[data-theme="gridline-night"] .text-text-1.text-4xl,
+[data-theme="gridline-night"] .text-text-1.text-5xl {
+  color: #38BDF8 !important;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3) !important;
+}
+
+/* cinematic night image filters mapping */
+[data-theme="gridline-night"] img,
+[data-theme="gridline-night"] .bg-cover {
+  filter: brightness(0.85) contrast(1.15) saturate(0.85) !important;
+}
+
+/* Command Center Amber CTAs with High-Contrast Text (WCAG AA Compliant) */
+[data-theme="gridline-night"] button.bg-brand-orange,
+[data-theme="gridline-night"] .bg-brand-orange {
+  background-color: #F97316 !important;
+  color: #020812 !important; /* Critical 5.0:1 contrast fix */
+  font-weight: 700 !important;
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.25) !important;
+  border: 1px solid rgba(249, 115, 22, 0.3) !important;
+}
+
+[data-theme="gridline-night"] button.bg-brand-orange:hover,
+[data-theme="gridline-night"] .bg-brand-orange:hover {
+  background-color: #FB923C !important;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.45) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* High-tech telemetry forms elements */
+[data-theme="gridline-night"] input,
+[data-theme="gridline-night"] textarea,
+[data-theme="gridline-night"] select {
+  background-color: #0A1220 !important;
+  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  color: #F1F5F9 !important;
+}
+
+[data-theme="gridline-night"] input:focus,
+[data-theme="gridline-night"] textarea:focus,
+[data-theme="gridline-night"] select:focus {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* ------------------------------------------------------------
+   3. PACIFIC UTILITY (EDITORIAL PORTFOLIO & ARCHITECTURAL LUXURY)
+   ------------------------------------------------------------ */
+
+/* Warm page surfaces and Stone backgrounds */
+[data-theme="pacific-utility"] body,
+[data-theme="pacific-utility"] .bg-bg-cream {
+  background-color: #FAF8F5 !important;
+}
+
+/* Architectural Card: warm white, ultra-thin borders & soft sprawling shadows */
+[data-theme="pacific-utility"] .shadow-card,
+[data-theme="pacific-utility"] .shadow-sm,
+[data-theme="pacific-utility"] .shadow-md,
+[data-theme="pacific-utility"] .shadow-lg,
+[data-theme="pacific-utility"] div.rounded-xl.border.bg-bg-white,
+[data-theme="pacific-utility"] div.rounded-2xl.border.bg-bg-white {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2DCCE !important;
+  border-radius: 8px !important; /* Refined, architectural geometric structure */
+  box-shadow: 0 12px 35px -8px rgba(17, 37, 45, 0.04), 0 1px 3px rgba(17, 37, 45, 0.01) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+}
+
+[data-theme="pacific-utility"] .shadow-card-hover:hover,
+[data-theme="pacific-utility"] .hover\:shadow-lg:hover,
+[data-theme="pacific-utility"] div.rounded-xl.border.bg-bg-white:hover,
+[data-theme="pacific-utility"] div.rounded-2xl.border.bg-bg-white:hover {
+  transform: translateY(-2px) !important;
+  border-color: #C8C0AF !important;
+  box-shadow: 0 24px 50px -10px rgba(17, 37, 45, 0.08), 0 1px 3px rgba(17, 37, 45, 0.01) !important;
+}
+
+/* Premium copper CTA buttons */
+[data-theme="pacific-utility"] button.bg-brand-orange,
+[data-theme="pacific-utility"] .bg-brand-orange {
+  background-color: #C25E3A !important;
+  color: #FFFFFF !important;
+  border-radius: 6px !important; /* Structured architectural finish */
+  font-weight: 600 !important;
+  border: 1px solid rgba(194, 94, 58, 0.1) !important;
+  box-shadow: 0 4px 10px rgba(194, 94, 58, 0.12) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[data-theme="pacific-utility"] button.bg-brand-orange:hover,
+[data-theme="pacific-utility"] .bg-brand-orange:hover {
+  background-color: #9B3E1E !important;
+  box-shadow: 0 6px 18px rgba(194, 94, 58, 0.22) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Sophisticated Sage/Teal eyebrows */
+[data-theme="pacific-utility"] .text-eyebrow {
+  color: #3F676B !important;
+  background-color: rgba(82, 126, 130, 0.08) !important;
+  border: 1px solid rgba(82, 126, 130, 0.22) !important;
+  box-shadow: none !important;
+  font-size: 0.68rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* Warm architectural form elements */
+[data-theme="pacific-utility"] input,
+[data-theme="pacific-utility"] textarea,
+[data-theme="pacific-utility"] select {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2DCCE !important;
+  color: #1B2A32 !important;
+  border-radius: 6px !important;
+}
+
+[data-theme="pacific-utility"] input:focus,
+[data-theme="pacific-utility"] textarea:focus,
+[data-theme="pacific-utility"] select:focus {
+  border-color: #C25E3A !important;
+  box-shadow: 0 0 0 4px rgba(194, 94, 58, 0.08) !important;
+}
+
+/* Editorial image overlays mapping */
+[data-theme="pacific-utility"] img,
+[data-theme="pacific-utility"] .bg-cover {
+  filter: sepia(0.08) contrast(0.98) brightness(1.02) !important;
+}
+
+
+/* ============================================================
    📖 THEME SYSTEM DOCUMENTATION
    ============================================================
    - Available Themes:
