@@ -384,9 +384,10 @@
   }
 
   *:focus-visible {
-    outline: 2px solid var(--color-brand-orange);
-    outline-offset: 2px;
-    border-radius: 4px;
+    outline: 3px solid var(--focus-ring) !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 6px var(--glow-primary) !important;
+    border-radius: 6px !important;
   }
 }
 
@@ -550,4 +551,65 @@
 /* Premium Technical Dark Map Filter specifically for Gridline Night */
 [data-theme="gridline-night"] .leaflet-tile-container {
   filter: invert(1) hue-rotate(180deg) saturate(0.4) contrast(1.25);
+}
+
+/* ============================================================
+   ♿ LEVEL 10 ACCESSIBILITY & CONTRAST PROGRAMMATIC HARMONY
+   ============================================================ */
+
+/* 1. Prevent accidental horizontal page overflow on any screen size */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* 2. Micro touch-target expander utility for small mobile items */
+.expand-touch-target {
+  position: relative;
+}
+.expand-touch-target::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 44px;
+  min-height: 44px;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+/* 3. Keyboard focus ring support on Map Markers and Leaflet pins */
+.leaflet-marker-icon:focus-visible {
+  outline: 3px solid var(--focus-ring) !important;
+  outline-offset: 4px !important;
+  box-shadow: 0 0 0 6px var(--glow-primary) !important;
+  border-radius: 9999px !important;
+}
+
+/* 4. Strict dynamic text contrast mappings across active theme scopes */
+[data-theme="o3-classic"] .text-text-2,
+[data-theme="o3-classic"] .text-muted-foreground {
+  color: var(--color-text-secondary) !important; /* #52525B gives high-contrast 7.3:1 ratio */
+}
+[data-theme="gridline-night"] .text-text-2,
+[data-theme="gridline-night"] .text-muted-foreground,
+[data-theme="gridline-night"] .text-white\/70,
+[data-theme="gridline-night"] .text-white\/60 {
+  color: var(--color-text-secondary) !important; /* #94A3B8 gives high-contrast 6.6:1 ratio */
+}
+[data-theme="pacific-utility"] .text-text-2,
+[data-theme="pacific-utility"] .text-muted-foreground {
+  color: var(--color-text-secondary) !important; /* #5A676E gives high-contrast 5.5:1 ratio */
+}
+
+/* 5. Clean up selection block text colors across themes */
+[data-theme="gridline-night"] ::selection {
+  background-color: var(--focus-ring) !important;
+  color: #020812 !important;
+}
+[data-theme="pacific-utility"] ::selection {
+  background-color: var(--focus-ring) !important;
+  color: #FFFFFF !important;
 }

@@ -42,7 +42,7 @@ export function Header() {
             <Link href="/contact">Request a Consultation</Link>
           </Button>
           <button
-            className="lg:hidden p-2 text-brand-primary"
+            className="lg:hidden h-11 w-11 flex items-center justify-center text-brand-primary hover:text-brand-orange transition-colors rounded-full focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 outline-none"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
