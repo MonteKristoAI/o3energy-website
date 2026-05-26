@@ -369,6 +369,10 @@
     text-wrap: pretty;
   }
 
+  body, header, footer, main, section, input, textarea, select, button, .border, .shadow-card, .shadow-floating {
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight text-brand-primary;
     text-wrap: balance;
@@ -468,6 +472,7 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+      transform: none !important;
     }
   }
 }
