@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Chatbot } from '@/components/Chatbot';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 const inter = Inter({
@@ -69,6 +70,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <Chatbot />
+          <ThemeSwitcher />
         </ThemeProvider>
       </body>
     </html>
