@@ -613,3 +613,30 @@ html, body {
   background-color: var(--focus-ring) !important;
   color: #FFFFFF !important;
 }
+
+/* 6. Dynamic contact page background radial glow override */
+section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
+  background: radial-gradient(circle at top right, var(--glow-primary), transparent 55%) !important;
+}
+
+/* ============================================================
+   📖 THEME SYSTEM DOCUMENTATION
+   ============================================================
+   - Available Themes:
+     1. O3 Classic: Light Navy & Solar Orange brand identity.
+     2. Gridline Night: Cinematic Dark Operational Telemetry.
+     3. Pacific Utility: Editorial Ivory & Terracotta Copper.
+   
+   - File Locations:
+     - Global CSS Variables & Token Mapping: app/globals.css
+     - Client Theme State & LocalStorage Injection: components/providers/ThemeProvider.tsx
+     - Blocking Early Injection Script: app/layout.tsx
+     - Segment Swapper component: components/ThemeSwitcher.tsx
+   
+   - Safely Customizing Colors:
+     - To adjust primary or accent colors, edit the --color-primary and --color-accent variables
+       in app/globals.css under the respective theme selector block.
+   
+   - Removing the Swapper for Production Handoff:
+     - Open app/layout.tsx, delete `<ThemeSwitcher />` on line 73, and remove the import on line 7.
+   ============================================================ */
