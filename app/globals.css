@@ -689,22 +689,36 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
   text-shadow: 0 0 12px rgba(243, 110, 32, 0.35) !important; /* Premium organic glow */
 }
 
+[data-theme="pacific-utility"] section.bg-brand-primary {
+  background-color: #FAF8F5 !important;
+  background-image: 
+    linear-gradient(rgba(18, 36, 45, 0.008) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 36, 45, 0.008) 1px, transparent 1px) !important;
+  background-size: 56px 56px !important;
+  border-top: 1px solid #E2DCCE !important;
+  border-bottom: 1px solid #E2DCCE !important;
+}
+
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm {
-  background-color: #192D36 !important; /* Lighter organic slate-green card for elegant separation from background */
-  border: 1px solid rgba(194, 94, 58, 0.25) !important; /* Subtle copper border */
-  box-shadow: 0 10px 30px rgba(17, 37, 45, 0.4) !important;
+  background-color: #FFFFFF !important; /* Premium warm-white architectural card */
+  border: 1px solid rgba(18, 36, 45, 0.08) !important; /* Minimal borders */
+  border-radius: 8px !important;
+  box-shadow: 0 12px 35px -8px rgba(17, 37, 45, 0.04), 0 1px 3px rgba(17, 37, 45, 0.01) !important;
 }
+
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm:hover {
-  border-color: rgba(194, 94, 58, 0.5) !important;
-  box-shadow: 0 15px 40px rgba(194, 94, 58, 0.15) !important;
+  border-color: #C8C0AF !important;
+  box-shadow: 0 24px 50px -10px rgba(17, 37, 45, 0.08), 0 1px 3px rgba(17, 37, 45, 0.01) !important;
 }
+
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm .text-white\/70 {
-  color: rgba(255, 255, 255, 0.88) !important; /* Elegant high-contrast ivory text on slate card */
-  font-weight: 600 !important;
+  color: var(--color-text-secondary) !important; /* #5A676E graphite text */
+  font-weight: 500 !important;
 }
+
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm > div:first-child {
-  color: #E68560 !important; /* Premium radiant warm copper */
-  text-shadow: 0 0 12px rgba(194, 94, 58, 0.3) !important; /* Refined architectural glow */
+  color: #C25E3A !important; /* Terracotta copper values */
+  text-shadow: none !important; /* No glow on light editorial cards */
 }
 
 /* 
