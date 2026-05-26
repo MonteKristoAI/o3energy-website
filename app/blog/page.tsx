@@ -38,7 +38,7 @@ export default function BlogIndexPage() {
         <div className="max-w-7xl mx-auto">
           <Link
             href={`/blog/${featured.slug}`}
-            className="group grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-center bg-white rounded-3xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all"
+            className="group grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-center bg-bg-white rounded-3xl border border-border overflow-hidden shadow-card hover:shadow-card-hover transition-all"
           >
             <div className="relative aspect-[16/10] lg:aspect-auto lg:h-full min-h-[320px]">
               <Image
@@ -94,7 +94,7 @@ export default function BlogIndexPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                  className="group flex flex-col bg-bg-white rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-card-hover transition-all"
                 >
                   <div className="relative aspect-[16/10]">
                     <Image

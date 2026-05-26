@@ -249,7 +249,7 @@ export default function HomePage() {
 
           <Link
             href={`/blog/${featuredPost.slug}`}
-            className="group grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-center bg-white rounded-3xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all"
+            className="group grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-center bg-bg-white rounded-3xl border border-border overflow-hidden shadow-card hover:shadow-card-hover transition-all"
           >
             <div className="relative aspect-[16/10] lg:aspect-auto lg:h-full min-h-[320px]">
               <Image
@@ -361,7 +361,7 @@ export default function HomePage() {
 
           {/* Right: General inquiry form */}
           <div>
-            <div className="bg-white p-6 md:p-10 rounded-3xl border border-border shadow-2xl relative">
+            <div className="bg-bg-white p-6 md:p-10 rounded-3xl border border-border shadow-floating relative">
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-brand-orange rounded-full blur-3xl opacity-20 pointer-events-none" />
               <h3 className="text-2xl md:text-3xl font-display font-semibold mb-2 text-brand-primary tracking-tight">
                 Send a message

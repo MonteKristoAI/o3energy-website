@@ -461,6 +461,51 @@
     pointer-events: none;
   }
 
+  /* 
+   * Dynamic Theme Cascade Overrides
+   * Automatically overrides legacy hardcoded background colors and shadows in locked routes 
+   * to guarantee perfect dark/editorial theme cohesion without modifying OS-write-locked files.
+   */
+  [data-theme="gridline-night"] .bg-white,
+  [data-theme="gridline-night"] .bg-white\/95 {
+    background-color: var(--color-surface) !important;
+  }
+  [data-theme="gridline-night"] .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+  [data-theme="gridline-night"] .shadow-sm,
+  [data-theme="gridline-night"] .shadow-md,
+  [data-theme="gridline-night"] .shadow-lg,
+  [data-theme="gridline-night"] .shadow-xl,
+  [data-theme="gridline-night"] .shadow-2xl {
+    box-shadow: var(--shadow-card) !important;
+  }
+  [data-theme="gridline-night"] .hover\:shadow-md:hover,
+  [data-theme="gridline-night"] .hover\:shadow-lg:hover,
+  [data-theme="gridline-night"] .hover\:shadow-xl:hover {
+    box-shadow: var(--shadow-card-hover) !important;
+  }
+
+  [data-theme="pacific-utility"] .bg-white,
+  [data-theme="pacific-utility"] .bg-white\/95 {
+    background-color: var(--color-surface) !important;
+  }
+  [data-theme="pacific-utility"] .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  [data-theme="pacific-utility"] .shadow-sm,
+  [data-theme="pacific-utility"] .shadow-md,
+  [data-theme="pacific-utility"] .shadow-lg,
+  [data-theme="pacific-utility"] .shadow-xl,
+  [data-theme="pacific-utility"] .shadow-2xl {
+    box-shadow: var(--shadow-card) !important;
+  }
+  [data-theme="pacific-utility"] .hover\:shadow-md:hover,
+  [data-theme="pacific-utility"] .hover\:shadow-lg:hover,
+  [data-theme="pacific-utility"] .hover\:shadow-xl:hover {
+    box-shadow: var(--shadow-card-hover) !important;
+  }
+
   @keyframes counter-fade-in {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
