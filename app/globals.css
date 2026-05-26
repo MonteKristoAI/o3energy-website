@@ -619,6 +619,78 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
   background: radial-gradient(circle at top right, var(--glow-primary), transparent 55%) !important;
 }
 
+/* ------------------------------------------------------------
+   ♿ LEVEL 10 METRICS LAYOUT & CONTRAST HARMONY OVERRIDES
+   ------------------------------------------------------------ */
+
+/* Robust Layout Safeguards for Metric Tiles (Prevent Overlaps and squishing on Mobile/Tablet) */
+.bg-brand-dark.shadow-sm {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: 140px !important;
+  gap: 12px !important; /* Force a robust separation gap between value and label */
+}
+
+/* Force value text box to behave cleanly and not overflow */
+.bg-brand-dark.shadow-sm > div:first-child {
+  line-height: 1.15 !important;
+  margin-bottom: 4px !important;
+  width: 100% !important;
+}
+
+/* Force label text to prevent any inherited backgrounds, borders, or layout distortion */
+.bg-brand-dark.shadow-sm > div:last-child {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block !important;
+  position: relative !important;
+  transform: none !important;
+  width: 100% !important;
+  line-height: 1.4 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Homepage Metrics Counter Strip Dark Theme Persistence
+   When the strip is rendered inside a dark primary section (.bg-brand-primary), 
+   force the cards to remain dark navy/charcoal and use light text to ensure 
+   outstanding contrast and cohesive background visual rhythm. */
+[data-theme="o3-classic"] .bg-brand-primary .bg-brand-dark.shadow-sm {
+  background-color: #0A1628 !important; /* Elegant dark navy card */
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="o3-classic"] .bg-brand-primary .bg-brand-dark.shadow-sm .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7) !important; /* Clean light gray label */
+}
+
+[data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm {
+  background-color: #11252D !important; /* Organic dark slate-green card */
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm .text-white\/70 {
+  color: rgba(255, 255, 255, 0.75) !important; /* Elegant ivory label */
+}
+
+/* Light Editorial Section Metrics Counter Strip Labels Fix
+   Ensure labels are highly visible on light cream backgrounds (e.g. /about page) 
+   by mapping the white/70 text to dynamic high-contrast theme-specific secondary text. */
+[data-theme="o3-classic"] :not(.bg-brand-primary) .bg-brand-dark.shadow-sm .text-white\/70,
+[data-theme="o3-classic"] section:not(.bg-brand-primary) .text-white\/70 {
+  color: var(--color-text-secondary) !important; /* #52525B high contrast gray */
+}
+
+[data-theme="pacific-utility"] :not(.bg-brand-primary) .bg-brand-dark.shadow-sm .text-white\/70,
+[data-theme="pacific-utility"] section:not(.bg-brand-primary) .text-white\/70 {
+  color: var(--color-text-secondary) !important; /* #5A676E high contrast graphite */
+}
+
 /* ============================================================
    🎨 PHASE 12 & 13: SENIOR VISUAL ART DIRECTION & QA OVERRIDES (10/10 UPGRADE)
    ============================================================ */
