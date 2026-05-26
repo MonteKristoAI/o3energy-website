@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Chatbot } from '@/components/Chatbot';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -45,13 +46,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('o3-theme');
+                  var theme = saved || 'o3-classic';
+                  document.documentElement.setAttribute('data-theme', theme);
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased min-h-[100dvh] flex flex-col bg-bg-cream text-text-1 font-body">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        <Chatbot />
+        <ThemeProvider>
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <Chatbot />
+        </ThemeProvider>
       </body>
     </html>
   );

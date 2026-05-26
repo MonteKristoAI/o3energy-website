@@ -21,7 +21,7 @@ export function LeadershipCard({ person, variant = 'standard' }: LeadershipCardP
 
   if (isFeatured) {
     return (
-      <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-3xl border border-border overflow-hidden flex flex-col md:flex-row mb-8">
+      <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-bg-white rounded-3xl border border-border overflow-hidden flex flex-col md:flex-row mb-8">
         <div className="w-full md:w-1/3 relative aspect-[3/4] md:aspect-auto">
           {person.portrait ? (
             <Image src={person.portrait.src} alt={person.portrait.alt} fill className="object-cover" />
@@ -48,7 +48,7 @@ export function LeadershipCard({ person, variant = 'standard' }: LeadershipCardP
   }
 
   return (
-    <div className="bg-white rounded-3xl border border-border overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+    <div className="bg-bg-white rounded-3xl border border-border overflow-hidden flex flex-col hover:shadow-md transition-shadow">
       <div className="w-full relative aspect-[4/5]">
         {person.portrait ? (
           <Image src={person.portrait.src} alt={person.portrait.alt} fill className="object-cover" />

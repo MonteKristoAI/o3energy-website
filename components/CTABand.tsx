@@ -26,7 +26,7 @@ export function CTABand({
   const useImage = withImage ?? variant === 'dark'
 
   const bgClasses = {
-    dark: 'bg-brand-primary text-white',
+    dark: 'bg-brand-dark text-white',
     light: 'bg-bg-cream text-text-1 border-y border-border',
     orange: 'bg-brand-orange text-white',
   }
@@ -84,7 +84,7 @@ export function CTABand({
               className={cn(
                 variant === 'dark'
                   ? 'bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 rounded-full px-8 h-14 font-semibold backdrop-blur-sm'
-                  : 'rounded-full px-8 h-14 bg-white text-brand-primary border-border hover:bg-bg-cream font-semibold',
+                  : 'rounded-full px-8 h-14 bg-bg-white text-brand-primary border-border hover:bg-bg-cream font-semibold',
               )}
             >
               <Link href={ctaSecondary.href}>

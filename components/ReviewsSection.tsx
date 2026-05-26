@@ -111,7 +111,7 @@ function GoogleBadge() {
 
 export function ReviewsSection() {
   return (
-    <section className="py-24 px-4 bg-white border-y border-border">
+    <section className="py-24 px-4 bg-bg-white border-y border-border">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <span className="text-eyebrow text-brand-orange mb-4 block">Client reviews</span>

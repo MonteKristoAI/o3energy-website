@@ -18,7 +18,7 @@ export function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-bg-white/95 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
         <Logo variant="header" onNavigate={() => setOpen(false)} />
         <nav className="hidden lg:flex items-center gap-6 font-medium text-text-2 text-sm">
@@ -54,7 +54,7 @@ export function Header() {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="lg:hidden border-t border-border bg-white shadow-lg">
+        <div className="lg:hidden border-t border-border bg-bg-white shadow-lg">
           <nav className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-1 font-medium text-brand-primary">
             {navItems.map((item) => (
               <Link

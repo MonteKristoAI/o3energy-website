@@ -102,7 +102,7 @@ export function MultiStepConsultationForm({ onSubmitStub }: MultiStepConsultatio
   if (isSuccess) {
     return (
       <div
-        className="bg-white p-8 md:p-14 rounded-3xl border border-border text-center flex flex-col items-center justify-center min-h-[400px] shadow-sm"
+        className="bg-bg-white p-8 md:p-14 rounded-3xl border border-border text-center flex flex-col items-center justify-center min-h-[400px] shadow-sm"
         role="alert"
         aria-live="polite"
       >
@@ -139,7 +139,7 @@ export function MultiStepConsultationForm({ onSubmitStub }: MultiStepConsultatio
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="bg-white p-6 md:p-10 rounded-3xl border border-border shadow-[0_20px_40px_-15px_rgba(2,34,64,0.08)] relative overflow-hidden"
+        className="bg-bg-white p-6 md:p-10 rounded-3xl border border-border shadow-[0_20px_40px_-15px_rgba(2,34,64,0.08)] relative overflow-hidden"
       >
         {/* Progress bar */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-brand-primary/5">
@@ -183,7 +183,7 @@ export function MultiStepConsultationForm({ onSubmitStub }: MultiStepConsultatio
                     'text-left p-5 border-2 rounded-2xl transition-all flex items-start gap-4 group',
                     checked
                       ? 'border-brand-orange bg-brand-orange/5'
-                      : 'border-border bg-white hover:border-brand-primary/30 hover:bg-bg-cream',
+                      : 'border-border bg-bg-white hover:border-brand-primary/30 hover:bg-bg-cream',
                   )}
                 >
                   <span

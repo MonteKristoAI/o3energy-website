@@ -1,47 +1,352 @@
 @import "tailwindcss";
 
-@theme {
-  /* Brand colors */
-  --color-brand-primary: #022240;
-  --color-brand-dark: #0A1628;
-  --color-brand-orange: #F36E20;
-  --color-accent-coral: #E15B16;
-  --color-accent-peach: #F7C29A;
-  --color-success: #2D6A4F;
+@variant gridline-night ([data-theme="gridline-night"] &);
+@variant pacific-utility ([data-theme="pacific-utility"] &);
 
-  /* Surfaces */
-  --color-bg-cream: #F7F4EE;
-  --color-bg-white: #FFFFFF;
+/* ============================================================
+   O3 Energy Premium Design System v1.0
+   Theme Configurations (O3 Classic, Gridline Night, Pacific Utility)
+   ============================================================ */
 
-  /* Text */
-  --color-text-1: #1D1F28;
-  --color-text-2: #52525B;
-
-  /* Borders */
-  --color-border: #E4E2DC;
-  --color-border-strong: #C7C4BD;
-
-  /* Danger / form */
-  --color-danger: #B91C1C;
-
-  /* shadcn primitives (Select / Accordion / Dialog popover content) */
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #1D1F28;
-  --color-muted: #F7F4EE;
-  --color-muted-foreground: #52525B;
-  --color-accent: #FFF1E6;
-  --color-accent-foreground: #022240;
-  --color-input: #E4E2DC;
-  --color-ring: #F36E20;
-  --color-destructive: #B91C1C;
-  --color-secondary: #F7F4EE;
-  --color-secondary-foreground: #022240;
+:root, [data-theme="o3-classic"] {
+  /* 1. Foundation tokens */
+  --color-background: #F7F4EE;
+  --color-foreground: #1D1F28;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F7F4EE;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-inverse: #022240;
   --color-card: #FFFFFF;
   --color-card-foreground: #1D1F28;
+  --color-card-muted: #F7F4EE;
+
+  /* 2. Brand/action tokens */
   --color-primary: #022240;
+  --color-primary-hover: #0A1628;
+  --color-primary-active: #022240;
   --color-primary-foreground: #FFFFFF;
-  --color-foreground: #1D1F28;
-  --color-background: #F7F4EE;
+  --color-secondary: #F7F4EE;
+  --color-secondary-hover: #E4E2DC;
+  --color-secondary-foreground: #022240;
+  --color-accent: #F36E20;
+  --color-accent-soft: #FFF1E6;
+  --color-accent-muted: #FFF8F2;
+  --color-accent-foreground: #022240;
+
+  /* Legacy color anchors (guarantees zero-redesign retro-compatibility) */
+  --color-brand-primary-val: #022240;
+  --color-brand-dark-val: #0A1628;
+  --color-brand-orange-val: #F36E20;
+  --color-accent-coral-val: #E15B16;
+  --color-accent-peach-val: #F7C29A;
+  --color-success-val: #2D6A4F;
+  --color-destructive: #B91C1C;
+
+  /* 3. Text tokens */
+  --color-text-primary: #1D1F28;
+  --color-text-secondary: #52525B;
+  --color-text-muted: #71717A;
+  --color-text-inverse: #FFFFFF;
+  --color-link: #022240;
+  --color-link-hover: #F36E20;
+
+  /* 4. Border/shadow/effects tokens */
+  --color-border: #E4E2DC;
+  --color-border-strong: #C7C4BD;
+  --color-border-subtle: #F0EEE9;
+  --shadow-card: 0 10px 30px -10px rgba(2, 34, 64, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 20px 40px -15px rgba(2, 34, 64, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-button: 0 2px 4px rgba(2, 34, 64, 0.06);
+  --shadow-floating: 0 20px 50px -12px rgba(2, 34, 64, 0.15);
+  --glow-primary: rgba(243, 110, 32, 0.15);
+  --glow-subtle: rgba(2, 34, 64, 0.05);
+  --focus-ring: #F36E20;
+
+  /* 5. Layout tokens */
+  --nav-background: rgba(255, 255, 255, 0.95);
+  --nav-foreground: #52525B;
+  --nav-border: #E4E2DC;
+  --footer-background: #0A1628;
+  --footer-foreground: #FFFFFF;
+  --section-background: #F7F4EE;
+  --section-background-alt: #FFFFFF;
+  --section-divider: #E4E2DC;
+
+  /* 6. Media/overlay tokens */
+  --hero-overlay: linear-gradient(135deg, rgba(2, 34, 64, 0.55) 0%, rgba(243, 110, 32, 0.25) 100%);
+  --hero-overlay-strong: linear-gradient(180deg, rgba(2, 34, 64, 0.85) 0%, rgba(10, 22, 40, 0.92) 100%);
+  --image-overlay: rgba(2, 34, 64, 0.4);
+  --image-overlay-hover: rgba(2, 34, 64, 0.55);
+  --portfolio-overlay: linear-gradient(to bottom, rgba(2, 34, 64, 0.65) 0%, rgba(10, 22, 40, 0.75) 100%);
+  --cta-overlay: linear-gradient(180deg, rgba(2, 34, 64, 0.62) 0%, rgba(10, 22, 40, 0.78) 100%);
+
+  /* 7. Component tokens */
+  --button-primary-bg: #F36E20;
+  --button-primary-bg-hover: #E15B16;
+  --button-primary-text: #FFFFFF;
+  --button-secondary-bg: #FFFFFF;
+  --button-secondary-border: #E4E2DC;
+  --button-secondary-text: #022240;
+  --badge-bg: rgba(243, 110, 32, 0.12);
+  --badge-border: rgba(243, 110, 32, 0.28);
+  --badge-text: #F36E20;
+  --input-bg: transparent;
+  --input-border: #E4E2DC;
+  --input-text: #1D1F28;
+  --input-placeholder: #A1A1AA;
+  --input-focus-border: #F36E20;
+  --metric-color: #022240;
+  --icon-color: #F36E20;
+  --chat-button-bg: #022240;
+  --chat-button-text: #FFFFFF;
+
+  /* 8. Motion tokens */
+  --transition-theme: all 0.3s ease-in-out;
+  --transition-hover: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.1s ease;
+  --transition-slow: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="gridline-night"] {
+  /* 1. Foundation tokens */
+  --color-background: #070E1A;
+  --color-foreground: #F1F5F9;
+  --color-surface: #0F1A2D;
+  --color-surface-muted: #0A1220;
+  --color-surface-elevated: #16253D;
+  --color-surface-inverse: #F8FAFC;
+  --color-card: #0F1A2D;
+  --color-card-foreground: #F1F5F9;
+  --color-card-muted: #0A1220;
+
+  /* 2. Brand/action tokens */
+  --color-primary: #38BDF8;
+  --color-primary-hover: #0EA5E9;
+  --color-primary-active: #38BDF8;
+  --color-primary-foreground: #020812;
+  --color-secondary: #0A1220;
+  --color-secondary-hover: #16253D;
+  --color-secondary-foreground: #38BDF8;
+  --color-accent: #F97316;
+  --color-accent-soft: rgba(56, 189, 248, 0.15);
+  --color-accent-muted: rgba(56, 189, 248, 0.05);
+  --color-accent-foreground: #FFFFFF;
+
+  /* Legacy color anchors (guarantees zero-redesign retro-compatibility) */
+  --color-brand-primary-val: #38BDF8;
+  --color-brand-dark-val: #020812;
+  --color-brand-orange-val: #F97316;
+  --color-accent-coral-val: #EA580C;
+  --color-accent-peach-val: rgba(56, 189, 248, 0.25);
+  --color-success-val: #10B981;
+  --color-destructive: #EF4444;
+
+  /* 3. Text tokens */
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  --color-text-inverse: #020812;
+  --color-link: #38BDF8;
+  --color-link-hover: #F97316;
+
+  /* 4. Border/shadow/effects tokens */
+  --color-border: rgba(56, 189, 248, 0.15);
+  --color-border-strong: rgba(56, 189, 248, 0.35);
+  --color-border-subtle: rgba(56, 189, 248, 0.08);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.7);
+  --shadow-button: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-floating: 0 30px 60px rgba(0, 0, 0, 0.6);
+  --glow-primary: rgba(56, 189, 248, 0.2);
+  --glow-subtle: rgba(56, 189, 248, 0.05);
+  --focus-ring: #38BDF8;
+
+  /* 5. Layout tokens */
+  --nav-background: rgba(15, 26, 45, 0.95);
+  --nav-foreground: #94A3B8;
+  --nav-border: rgba(56, 189, 248, 0.15);
+  --footer-background: #020812;
+  --footer-foreground: #F1F5F9;
+  --section-background: #070E1A;
+  --section-background-alt: #0F1A2D;
+  --section-divider: rgba(56, 189, 248, 0.15);
+
+  /* 6. Media/overlay tokens */
+  --hero-overlay: linear-gradient(135deg, rgba(7, 14, 26, 0.8) 0%, rgba(56, 189, 248, 0.15) 100%);
+  --hero-overlay-strong: linear-gradient(180deg, rgba(7, 14, 26, 0.95) 0%, rgba(2, 8, 18, 0.92) 100%);
+  --image-overlay: rgba(7, 14, 26, 0.7);
+  --image-overlay-hover: rgba(7, 14, 26, 0.85);
+  --portfolio-overlay: linear-gradient(to bottom, rgba(7, 14, 26, 0.75) 0%, rgba(2, 8, 18, 0.85) 100%);
+  --cta-overlay: linear-gradient(180deg, rgba(7, 14, 26, 0.8) 0%, rgba(2, 8, 18, 0.9) 100%);
+
+  /* 7. Component tokens */
+  --button-primary-bg: #F97316;
+  --button-primary-bg-hover: #EA580C;
+  --button-primary-text: #FFFFFF;
+  --button-secondary-bg: #0F1A2D;
+  --button-secondary-border: rgba(56, 189, 248, 0.25);
+  --button-secondary-text: #38BDF8;
+  --badge-bg: rgba(56, 189, 248, 0.1);
+  --badge-border: rgba(56, 189, 248, 0.25);
+  --badge-text: #38BDF8;
+  --input-bg: rgba(7, 14, 26, 0.6);
+  --input-border: rgba(56, 189, 248, 0.2);
+  --input-text: #F1F5F9;
+  --input-placeholder: #64748B;
+  --input-focus-border: #38BDF8;
+  --metric-color: #38BDF8;
+  --icon-color: #F97316;
+  --chat-button-bg: #38BDF8;
+  --chat-button-text: #020812;
+
+  /* 8. Motion tokens */
+  --transition-theme: all 0.3s ease-in-out;
+  --transition-hover: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.1s ease;
+  --transition-slow: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="pacific-utility"] {
+  /* 1. Foundation tokens */
+  --color-background: #FAF8F5; /* warm ivory background */
+  --color-foreground: #1B2A32; /* deep graphite / blue-green typography */
+  --color-surface: #FFFFFF; /* warm-white card */
+  --color-surface-muted: #F2ECE0; /* soft stone/sand backgrounds */
+  --color-surface-elevated: #FCFAF6;
+  --color-surface-inverse: #11252D; /* deep graphite/blue-green */
+  --color-card: #FFFFFF; /* warm-white cards */
+  --color-card-foreground: #1B2A32;
+  --color-card-muted: #F2ECE0;
+
+  /* 2. Brand/action tokens */
+  --color-primary: #11252D; /* deep graphite / dark blue-green */
+  --color-primary-hover: #0D1C22;
+  --color-primary-active: #11252D;
+  --color-primary-foreground: #FAF8F5;
+  --color-secondary: #F2ECE0;
+  --color-secondary-hover: #E7DFD0;
+  --color-secondary-foreground: #11252D;
+  --color-accent: #C25E3A; /* copper / terracotta CTA */
+  --color-accent-soft: rgba(194, 94, 58, 0.12);
+  --color-accent-muted: rgba(194, 94, 58, 0.05);
+  --color-accent-foreground: #FFFFFF;
+
+  /* Legacy color anchors (guarantees zero-redesign retro-compatibility) */
+  --color-brand-primary-val: #11252D;
+  --color-brand-dark-val: #0D1C22;
+  --color-brand-orange-val: #C25E3A;
+  --color-accent-coral-val: #9B3E1E;
+  --color-accent-peach-val: rgba(82, 126, 130, 0.15); /* muted sage/teal accent */
+  --color-success-val: #0E5E4A;
+  --color-destructive: #9B301E;
+
+  /* 3. Text tokens */
+  --color-text-primary: #1B2A32; /* deep graphite / blue-green */
+  --color-text-secondary: #5A676E; /* muted gray-green secondary text */
+  --color-text-muted: #7E8C94; /* sophisticated gray-green muted */
+  --color-text-inverse: #FAF8F5;
+  --color-link: #11252D;
+  --color-link-hover: #C25E3A;
+
+  /* 4. Border/shadow/effects tokens */
+  --color-border: #E2DCCE; /* warm gray low opacity */
+  --color-border-strong: #C8C0AF;
+  --color-border-subtle: #F1EDE2;
+  --shadow-card: 0 10px 30px -10px rgba(18, 36, 45, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 20px 40px -15px rgba(18, 36, 45, 0.1), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-button: 0 2px 4px rgba(18, 36, 45, 0.04);
+  --shadow-floating: 0 25px 60px -12px rgba(18, 36, 45, 0.15);
+  --glow-primary: rgba(194, 94, 58, 0.1);
+  --glow-subtle: rgba(18, 36, 45, 0.03);
+  --focus-ring: #C25E3A;
+
+  /* 5. Layout tokens */
+  --nav-background: rgba(250, 248, 244, 0.96);
+  --nav-foreground: #5A676E;
+  --nav-border: #E2DCCE;
+  --footer-background: #11252D; /* deep graphite/blue-green with warm text */
+  --footer-foreground: #FAF8F5;
+  --section-background: #FAF8F5;
+  --section-background-alt: #F2ECE0; /* soft stone/sand */
+  --section-divider: #E2DCCE;
+
+  /* 6. Media/overlay tokens */
+  --hero-overlay: linear-gradient(135deg, rgba(17, 37, 45, 0.45) 0%, rgba(194, 94, 58, 0.15) 100%);
+  --hero-overlay-strong: linear-gradient(180deg, rgba(250, 248, 244, 0.94) 0%, rgba(242, 236, 224, 0.9) 100%);
+  --image-overlay: rgba(17, 37, 45, 0.35);
+  --image-overlay-hover: rgba(17, 37, 45, 0.5);
+  --portfolio-overlay: linear-gradient(to bottom, rgba(17, 37, 45, 0.6) 0%, rgba(13, 28, 34, 0.8) 100%);
+  --cta-overlay: linear-gradient(180deg, rgba(17, 37, 45, 0.65) 0%, rgba(13, 28, 34, 0.85) 100%);
+
+  /* 7. Component tokens */
+  --button-primary-bg: #C25E3A; /* copper/terracotta */
+  --button-primary-bg-hover: #9B3E1E; /* darker copper */
+  --button-primary-text: #FFFFFF;
+  --button-secondary-bg: #FFFFFF;
+  --button-secondary-border: #E2DCCE;
+  --button-secondary-text: #11252D;
+  --badge-bg: rgba(82, 126, 130, 0.08); /* muted sage/teal */
+  --badge-border: rgba(82, 126, 130, 0.22);
+  --badge-text: #527E82; /* muted sage/teal secondary accent */
+  --input-bg: transparent;
+  --input-border: #E2DCCE;
+  --input-text: #1B2A32;
+  --input-placeholder: #7E8C94;
+  --input-focus-border: #C25E3A;
+  --metric-color: #11252D;
+  --icon-color: #C25E3A;
+  --chat-button-bg: #C25E3A;
+  --chat-button-text: #FFFFFF;
+
+  /* 8. Motion tokens */
+  --transition-theme: all 0.3s ease-in-out;
+  --transition-hover: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.1s ease;
+  --transition-slow: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme {
+  /* Brand color bindings (Mapping to theme CSS variables) */
+  --color-brand-primary: var(--color-brand-primary-val);
+  --color-brand-dark: var(--color-brand-dark-val);
+  --color-brand-orange: var(--color-brand-orange-val);
+  --color-accent-coral: var(--color-accent-coral-val);
+  --color-accent-peach: var(--color-accent-peach-val);
+  --color-success: var(--color-success-val);
+
+  /* Surfaces */
+  --color-bg-cream: var(--color-background);
+  --color-bg-white: var(--color-surface);
+
+  /* Text */
+  --color-text-1: var(--color-text-primary);
+  --color-text-2: var(--color-text-secondary);
+
+  /* Borders */
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+
+  /* Danger / form */
+  --color-danger: var(--color-destructive);
+
+  /* shadcn primitives (Select / Accordion / Dialog popover content) */
+  --color-popover: var(--color-surface);
+  --color-popover-foreground: var(--color-text-primary);
+  --color-muted: var(--color-surface-muted);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-accent: var(--color-accent-soft);
+  --color-accent-foreground: var(--color-accent-foreground);
+  --color-input: var(--color-border);
+  --color-ring: var(--focus-ring);
+  --color-destructive: var(--color-destructive);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+  --color-card: var(--color-card);
+  --color-card-foreground: var(--color-card-foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-foreground: var(--color-foreground);
+  --color-background: var(--color-background);
 
   /* Typography variables */
   --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
@@ -163,24 +468,30 @@
 
 /* Leaflet CSS import — required for the locations interactive map */
 @import 'leaflet/dist/leaflet.css';
-
 /* Custom Leaflet pin styling so pins use our orange brand */
 .leaflet-container {
-  background: #E4E2DC;
+  background: var(--color-background);
   font-family: var(--font-body);
 }
 
 .leaflet-popup-content-wrapper {
-  background: #FFFFFF;
-  color: #1D1F28;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
   border-radius: 12px;
-  box-shadow: 0 12px 32px -8px rgba(2, 34, 64, 0.4);
+  box-shadow: var(--shadow-floating);
+  border: 1px solid var(--color-border);
 }
 
 .leaflet-popup-tip {
-  background: #FFFFFF;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
 }
 
 .o3-marker {
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Premium Technical Dark Map Filter specifically for Gridline Night */
+[data-theme="gridline-night"] .leaflet-tile-container {
+  filter: invert(1) hue-rotate(180deg) saturate(0.4) contrast(1.25);
 }

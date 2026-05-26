@@ -68,7 +68,7 @@ export function JointVentureForm({ onSubmitStub }: JointVentureFormProps) {
 
   if (isSuccess) {
     return (
-      <div className="bg-brand-primary p-8 md:p-16 rounded-3xl border border-white/10 text-center text-white shadow-xl min-h-[500px] flex flex-col items-center justify-center" role="alert" aria-live="polite">
+      <div className="bg-brand-dark p-8 md:p-16 rounded-3xl border border-white/10 text-center text-white shadow-xl min-h-[500px] flex flex-col items-center justify-center" role="alert" aria-live="polite">
         <div className="w-24 h-24 bg-brand-orange text-white rounded-full flex items-center justify-center mx-auto mb-8 text-4xl shadow-[0_0_40px_rgba(243,110,32,0.4)]">✓</div>
         <h3 className="text-3xl md:text-4xl font-display font-semibold mb-4 text-balance">Submission received</h3>
         <p className="text-white/80 mb-8 max-w-lg mx-auto text-lg md:text-xl text-balance">Our acquisitions team will review the project and reply within one business day.</p>
@@ -79,7 +79,7 @@ export function JointVentureForm({ onSubmitStub }: JointVentureFormProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white p-6 md:p-10 rounded-3xl border border-border shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-bg-white p-6 md:p-10 rounded-3xl border border-border shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
         
         <div className="space-y-6">
           <h3 className="text-xl font-display font-semibold text-brand-primary border-b border-border pb-2">Project Details</h3>

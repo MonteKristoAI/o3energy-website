@@ -9,7 +9,7 @@ export interface TrustStripProps {
 }
 
 export function TrustStrip({ items, variant = 'dark', layout = 'inline' }: TrustStripProps) {
-  const bgClasses = variant === 'dark' ? 'bg-brand-primary text-white border-none' : 'bg-bg-cream text-brand-primary border-y border-border'
+  const bgClasses = variant === 'dark' ? 'bg-brand-dark text-white border-none' : 'bg-bg-cream text-brand-primary border-y border-border'
   const iconClasses = variant === 'dark' ? 'text-brand-orange' : 'text-brand-orange'
   const hoverClasses = variant === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'
 

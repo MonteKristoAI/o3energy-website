@@ -97,7 +97,7 @@ export function PartnerMarquee({
 
   return (
     <section
-      className="w-full overflow-hidden bg-white py-14 md:py-20 border-y border-border"
+      className="w-full overflow-hidden bg-bg-white py-14 md:py-20 border-y border-border"
       aria-label="Selected clients"
     >
       <div className="max-w-7xl mx-auto px-4 mb-10 text-center">

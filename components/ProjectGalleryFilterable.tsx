@@ -60,7 +60,7 @@ export function ProjectGalleryFilterable({ projects, initialFilters = {} }: Proj
   return (
     <div className="w-full flex flex-col gap-8">
       {/* Filters Bar */}
-      <div className="flex flex-col md:flex-row gap-4 items-center bg-white p-4 rounded-2xl border border-border shadow-sm sticky top-24 z-30">
+      <div className="flex flex-col md:flex-row gap-4 items-center bg-bg-white p-4 rounded-2xl border border-border shadow-sm sticky top-24 z-30">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full flex-1">
           <Select value={industryFilter} onValueChange={setIndustryFilter}>
             <SelectTrigger aria-label="Filter by industry">
@@ -118,7 +118,7 @@ export function ProjectGalleryFilterable({ projects, initialFilters = {} }: Proj
             ))}
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center py-24 text-center bg-white border border-border border-dashed rounded-3xl">
+          <div className="flex flex-col items-center justify-center py-24 text-center bg-bg-white border border-border border-dashed rounded-3xl">
             <div className="w-16 h-16 bg-brand-primary/5 rounded-full flex items-center justify-center text-brand-primary mb-4">
               <SearchX className="h-8 w-8" />
             </div>

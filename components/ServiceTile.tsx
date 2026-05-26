@@ -26,7 +26,7 @@ export function ServiceTile({ service, size = 'md' }: ServiceTileProps) {
     <Link
       href={service.href}
       className={cn(
-        'group flex flex-col bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(2,34,64,0.12)] h-full',
+        'group flex flex-col bg-bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(2,34,64,0.12)] h-full',
         isHorizontal && 'md:flex-row',
       )}
       aria-label={`${service.title}. ${service.shortDescription}`}
@@ -47,7 +47,7 @@ export function ServiceTile({ service, size = 'md' }: ServiceTileProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/55 via-brand-dark/20 to-transparent" />
         {/* Icon badge over image */}
-        <div className="absolute top-4 left-4 h-11 w-11 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-sm">
+        <div className="absolute top-4 left-4 h-11 w-11 rounded-xl bg-bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-sm">
           <service.icon className="h-5 w-5 text-brand-orange" />
         </div>
       </div>

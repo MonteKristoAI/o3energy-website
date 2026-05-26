@@ -81,7 +81,7 @@ export function ContactForm({ defaultValues, onSubmitStub }: ContactFormProps) {
               <FormItem>
                 <FormLabel>Full Name *</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your full name" className="bg-white" {...field} />
+                  <Input placeholder="Your full name" className="bg-bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -94,7 +94,7 @@ export function ContactForm({ defaultValues, onSubmitStub }: ContactFormProps) {
               <FormItem>
                 <FormLabel>Company *</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your company" className="bg-white" {...field} />
+                  <Input placeholder="Your company" className="bg-bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -110,7 +110,7 @@ export function ContactForm({ defaultValues, onSubmitStub }: ContactFormProps) {
               <FormItem>
                 <FormLabel>Email Address *</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="you@yourcompany.com" className="bg-white" {...field} />
+                  <Input type="email" placeholder="you@yourcompany.com" className="bg-bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -123,7 +123,7 @@ export function ContactForm({ defaultValues, onSubmitStub }: ContactFormProps) {
               <FormItem>
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="(555) 123-4567" className="bg-white" {...field} />
+                  <Input type="tel" placeholder="(555) 123-4567" className="bg-bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -140,7 +140,7 @@ export function ContactForm({ defaultValues, onSubmitStub }: ContactFormProps) {
               <FormControl>
                 <Textarea 
                   placeholder="How can we help you?" 
-                  className="min-h-[120px] bg-white resize-y" 
+                  className="min-h-[120px] bg-bg-white resize-y" 
                   {...field} 
                 />
               </FormControl>
@@ -153,7 +153,7 @@ export function ContactForm({ defaultValues, onSubmitStub }: ContactFormProps) {
           control={form.control}
           name="consent"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border border-border p-4 bg-white">
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border border-border p-4 bg-bg-white">
               <FormControl>
                 <input 
                   type="checkbox" 

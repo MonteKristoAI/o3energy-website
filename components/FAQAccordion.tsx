@@ -16,7 +16,7 @@ export function FAQAccordion({ items, generateSchema = true }: FAQAccordionProps
     <div className="w-full max-w-3xl mx-auto">
       <Accordion type="single" collapsible className="w-full">
         {items.map((faq, idx) => (
-          <AccordionItem key={idx} value={`item-${idx}`} className="border-border px-6 bg-white mb-4 rounded-2xl border data-[state=open]:border-brand-orange/50 data-[state=open]:shadow-sm transition-all overflow-hidden">
+          <AccordionItem key={idx} value={`item-${idx}`} className="border-border px-6 bg-bg-white mb-4 rounded-2xl border data-[state=open]:border-brand-orange/50 data-[state=open]:shadow-sm transition-all overflow-hidden">
             <AccordionTrigger className="text-left font-display font-semibold text-brand-primary text-lg hover:no-underline hover:text-brand-orange py-6">
               {faq.question}
             </AccordionTrigger>
