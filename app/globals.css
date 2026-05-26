@@ -690,7 +690,7 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
 }
 
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm {
-  background-color: #11252D !important; /* Organic dark slate-green card */
+  background-color: #192D36 !important; /* Lighter organic slate-green card for elegant separation from background */
   border: 1px solid rgba(194, 94, 58, 0.25) !important; /* Subtle copper border */
   box-shadow: 0 10px 30px rgba(17, 37, 45, 0.4) !important;
 }
@@ -705,6 +705,46 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm > div:first-child {
   color: #E68560 !important; /* Premium radiant warm copper */
   text-shadow: 0 0 12px rgba(194, 94, 58, 0.3) !important; /* Refined architectural glow */
+}
+
+/* 
+ * Gridline Night Homepage Metrics Strip Refinement
+ * Replaces the harsh solid bright cyan background strip with a premium, 
+ * immersive cyber command center grid background, matching the telemetry aesthetic.
+ */
+[data-theme="gridline-night"] section.bg-brand-primary {
+  background-color: #070E1A !important;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.02) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.15) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15) !important;
+}
+
+/* 
+ * Theme Switcher Accessibility and Background Overrides Immunity
+ * Prevents broad .shadow-sm styles from overriding active theme switcher buttons to white.
+ */
+[role="region"][aria-label="Theme Switcher"] button {
+  background-color: transparent !important;
+  color: var(--color-text-secondary) !important;
+}
+[role="region"][aria-label="Theme Switcher"] button[aria-pressed="true"] {
+  box-shadow: none !important;
+  border: none !important;
+}
+[data-theme="o3-classic"] [role="region"][aria-label="Theme Switcher"] button[aria-pressed="true"] {
+  background-color: #F36E20 !important;
+  color: #FFFFFF !important;
+}
+[data-theme="gridline-night"] [role="region"][aria-label="Theme Switcher"] button[aria-pressed="true"] {
+  background-color: #38BDF8 !important;
+  color: #020812 !important;
+}
+[data-theme="pacific-utility"] [role="region"][aria-label="Theme Switcher"] button[aria-pressed="true"] {
+  background-color: #C25E3A !important;
+  color: #FFFFFF !important;
 }
 
 /* ============================================================
