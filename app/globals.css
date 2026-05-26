@@ -637,6 +637,7 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
   line-height: 1.15 !important;
   margin-bottom: 4px !important;
   width: 100% !important;
+  transition: all 0.3s ease !important;
 }
 
 /* Force label text to prevent any inherited backgrounds, borders, or layout distortion */
@@ -652,43 +653,58 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
   line-height: 1.4 !important;
   padding: 0 !important;
   margin: 0 !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Homepage Metrics Counter Strip Dark Theme Persistence
-   When the strip is rendered inside a dark primary section (.bg-brand-primary), 
-   force the cards to remain dark navy/charcoal and use light text to ensure 
-   outstanding contrast and cohesive background visual rhythm. */
+/* Default light-surface metric label contrast mapping (e.g. on /about white cards) */
+[data-theme="o3-classic"] .bg-brand-dark.shadow-sm .text-white\/70 {
+  color: var(--color-text-secondary) !important; /* #52525B high contrast gray on white cards */
+}
+[data-theme="pacific-utility"] .bg-brand-dark.shadow-sm .text-white\/70 {
+  color: var(--color-text-secondary) !important; /* #5A676E high contrast graphite on white cards */
+}
+
+/* 
+ * Homepage Metrics Counter Strip Dark Theme Persistence & Contrast Polish
+ * When the strip is rendered inside a dark primary section (.bg-brand-primary):
+ * 1. Force the cards to remain dark navy/charcoal instead of turning white.
+ * 2. Remap labels to bright, highly visible light colors (rgba 255/0.85).
+ * 3. Polish value numbers with luminous, premium, client-ready glows.
+ */
 [data-theme="o3-classic"] .bg-brand-primary .bg-brand-dark.shadow-sm {
   background-color: #0A1628 !important; /* Elegant dark navy card */
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(243, 110, 32, 0.25) !important; /* Subtle brand orange card border */
+  box-shadow: 0 10px 30px rgba(2, 34, 64, 0.5) !important;
 }
-
+[data-theme="o3-classic"] .bg-brand-primary .bg-brand-dark.shadow-sm:hover {
+  border-color: rgba(243, 110, 32, 0.5) !important;
+  box-shadow: 0 15px 40px rgba(243, 110, 32, 0.12) !important;
+}
 [data-theme="o3-classic"] .bg-brand-primary .bg-brand-dark.shadow-sm .text-white\/70 {
-  color: rgba(255, 255, 255, 0.7) !important; /* Clean light gray label */
+  color: rgba(255, 255, 255, 0.85) !important; /* Brighter, high-contrast light text on dark navy card */
+  font-weight: 600 !important;
+}
+[data-theme="o3-classic"] .bg-brand-primary .bg-brand-dark.shadow-sm > div:first-child {
+  color: #FF7E36 !important; /* Luminous brand-vibrant orange */
+  text-shadow: 0 0 12px rgba(243, 110, 32, 0.35) !important; /* Premium organic glow */
 }
 
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm {
   background-color: #11252D !important; /* Organic dark slate-green card */
-  border-color: rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid rgba(194, 94, 58, 0.25) !important; /* Subtle copper border */
+  box-shadow: 0 10px 30px rgba(17, 37, 45, 0.4) !important;
 }
-
+[data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm:hover {
+  border-color: rgba(194, 94, 58, 0.5) !important;
+  box-shadow: 0 15px 40px rgba(194, 94, 58, 0.15) !important;
+}
 [data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm .text-white\/70 {
-  color: rgba(255, 255, 255, 0.75) !important; /* Elegant ivory label */
+  color: rgba(255, 255, 255, 0.88) !important; /* Elegant high-contrast ivory text on slate card */
+  font-weight: 600 !important;
 }
-
-/* Light Editorial Section Metrics Counter Strip Labels Fix
-   Ensure labels are highly visible on light cream backgrounds (e.g. /about page) 
-   by mapping the white/70 text to dynamic high-contrast theme-specific secondary text. */
-[data-theme="o3-classic"] :not(.bg-brand-primary) .bg-brand-dark.shadow-sm .text-white\/70,
-[data-theme="o3-classic"] section:not(.bg-brand-primary) .text-white\/70 {
-  color: var(--color-text-secondary) !important; /* #52525B high contrast gray */
-}
-
-[data-theme="pacific-utility"] :not(.bg-brand-primary) .bg-brand-dark.shadow-sm .text-white\/70,
-[data-theme="pacific-utility"] section:not(.bg-brand-primary) .text-white\/70 {
-  color: var(--color-text-secondary) !important; /* #5A676E high contrast graphite */
+[data-theme="pacific-utility"] .bg-brand-primary .bg-brand-dark.shadow-sm > div:first-child {
+  color: #E68560 !important; /* Premium radiant warm copper */
+  text-shadow: 0 0 12px rgba(194, 94, 58, 0.3) !important; /* Refined architectural glow */
 }
 
 /* ============================================================
