@@ -348,6 +348,12 @@
   --color-foreground: var(--color-foreground);
   --color-background: var(--color-background);
 
+  /* Box Shadows */
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+  --shadow-button: var(--shadow-button);
+  --shadow-floating: var(--shadow-floating);
+
   /* Typography variables */
   --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;

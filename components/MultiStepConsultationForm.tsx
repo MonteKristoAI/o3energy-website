@@ -139,7 +139,7 @@ export function MultiStepConsultationForm({ onSubmitStub }: MultiStepConsultatio
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="bg-bg-white p-6 md:p-10 rounded-3xl border border-border shadow-[0_20px_40px_-15px_rgba(2,34,64,0.08)] relative overflow-hidden"
+        className="bg-bg-white p-6 md:p-10 rounded-3xl border border-border shadow-floating relative overflow-hidden"
       >
         {/* Progress bar */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-brand-primary/5">

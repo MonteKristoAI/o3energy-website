@@ -30,9 +30,9 @@ function makeIcon() {
     className: 'o3-marker',
     html: `
       <svg width="40" height="52" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 0C8.95 0 0 8.95 0 20C0 35 20 52 20 52S40 35 40 20C40 8.95 31.05 0 20 0Z" fill="#F36E20"/>
-        <circle cx="20" cy="20" r="8.5" fill="#022240"/>
-        <circle cx="20" cy="20" r="3.5" fill="#FFFFFF"/>
+        <path d="M20 0C8.95 0 0 8.95 0 20C0 35 20 52 20 52S40 35 40 20C40 8.95 31.05 0 20 0Z" fill="var(--color-brand-orange)"/>
+        <circle cx="20" cy="20" r="8.5" fill="var(--color-brand-primary)"/>
+        <circle cx="20" cy="20" r="3.5" fill="var(--color-bg-white)"/>
       </svg>
     `,
     iconSize: [40, 52],
@@ -67,7 +67,7 @@ export function InteractiveMap({ offices }: InteractiveMapProps) {
   const icon = makeIcon()
 
   return (
-    <div className="w-full h-[480px] md:h-[560px] rounded-3xl overflow-hidden border border-border shadow-[0_20px_40px_-15px_rgba(2,34,64,0.18)]">
+    <div className="w-full h-[480px] md:h-[560px] rounded-3xl overflow-hidden border border-border shadow-floating">
       <MapContainer
         center={[25, -150]}
         zoom={3}

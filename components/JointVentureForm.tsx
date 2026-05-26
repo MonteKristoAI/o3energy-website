@@ -79,7 +79,7 @@ export function JointVentureForm({ onSubmitStub }: JointVentureFormProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-bg-white p-6 md:p-10 rounded-3xl border border-border shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-bg-white p-6 md:p-10 rounded-3xl border border-border shadow-floating">
         
         <div className="space-y-6">
           <h3 className="text-xl font-display font-semibold text-brand-primary border-b border-border pb-2">Project Details</h3>

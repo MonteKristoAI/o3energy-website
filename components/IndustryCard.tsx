@@ -20,7 +20,7 @@ export function IndustryCard({ industry, featuredProject }: IndustryCardProps) {
   return (
     <Link
       href={industry.href}
-      className="group flex flex-col bg-bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] h-full"
+      className="group flex flex-col bg-bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-card hover:shadow-card-hover h-full"
       aria-label={`${industry.title}. ${industry.shortDescription}`}
     >
       <div className="relative aspect-video w-full overflow-hidden bg-brand-primary/5">

@@ -48,7 +48,7 @@ export function LeadershipCard({ person, variant = 'standard' }: LeadershipCardP
   }
 
   return (
-    <div className="bg-bg-white rounded-3xl border border-border overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+    <div className="bg-bg-white rounded-3xl border border-border overflow-hidden flex flex-col shadow-card hover:shadow-card-hover transition-all duration-300">
       <div className="w-full relative aspect-[4/5]">
         {person.portrait ? (
           <Image src={person.portrait.src} alt={person.portrait.alt} fill className="object-cover" />

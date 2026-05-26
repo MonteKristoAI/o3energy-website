@@ -26,7 +26,7 @@ export function ServiceTile({ service, size = 'md' }: ServiceTileProps) {
     <Link
       href={service.href}
       className={cn(
-        'group flex flex-col bg-bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(2,34,64,0.12)] h-full',
+        'group flex flex-col bg-bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-card hover:shadow-card-hover h-full',
         isHorizontal && 'md:flex-row',
       )}
       aria-label={`${service.title}. ${service.shortDescription}`}

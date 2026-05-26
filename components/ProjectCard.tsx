@@ -14,7 +14,7 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
   return (
     <div 
       className={cn(
-        "group flex flex-col bg-bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-300 relative",
+        "group flex flex-col bg-bg-white border border-border rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 relative",
         isScroll ? "w-[320px] md:w-[384px] shrink-0 snap-start" : "w-full"
       )}
     >
