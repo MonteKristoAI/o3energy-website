@@ -620,7 +620,7 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
 }
 
 /* ============================================================
-   🎨 PHASE 12: SENIOR VISUAL ART DIRECTION OVERRIDES
+   🎨 PHASE 12 & 13: SENIOR VISUAL ART DIRECTION & QA OVERRIDES
    ============================================================ */
 
 /* ------------------------------------------------------------
@@ -693,6 +693,11 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+}
+
+/* ServiceAreaMap dot grid dynamic theme mapping */
+[data-theme="o3-classic"] div.bg-brand-primary\/5 > div[style*="radial-gradient"] {
+  background-image: radial-gradient(#F36E20 1px, transparent 1px) !important;
 }
 
 /* ------------------------------------------------------------
@@ -795,6 +800,20 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.15) !important;
 }
 
+/* Chatbot button contrast fix under Gridline Night */
+[data-theme="gridline-night"] .bg-brand-primary,
+[data-theme="gridline-night"] button.bg-brand-primary,
+[data-theme="gridline-night"] .bg-brand-primary\/90,
+[data-theme="gridline-night"] button.bg-brand-primary\/90 {
+  background-color: #38BDF8 !important;
+  color: #020812 !important; /* Highly luminous cyan on Slate-Black text gives 6.6:1 contrast ratio */
+}
+
+/* ServiceAreaMap dot grid dynamic theme mapping */
+[data-theme="gridline-night"] div.bg-brand-primary\/5 > div[style*="radial-gradient"] {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.25) 1px, transparent 1px) !important;
+}
+
 /* ------------------------------------------------------------
    3. PACIFIC UTILITY (EDITORIAL PORTFOLIO & ARCHITECTURAL LUXURY)
    ------------------------------------------------------------ */
@@ -878,6 +897,37 @@ section.pt-32.pb-24 > div.absolute.inset-0.z-0 > div:nth-child(4) {
 [data-theme="pacific-utility"] img,
 [data-theme="pacific-utility"] .bg-cover {
   filter: sepia(0.08) contrast(0.98) brightness(1.02) !important;
+}
+
+/* Premium Technical Editorial Map Filter specifically for Pacific Utility */
+[data-theme="pacific-utility"] .leaflet-tile-container {
+  filter: sepia(0.12) contrast(0.95) brightness(1.02) saturate(0.85) !important;
+}
+
+/* ServiceAreaMap dot grid dynamic theme mapping */
+[data-theme="pacific-utility"] div.bg-brand-primary\/5 > div[style*="radial-gradient"] {
+  background-image: radial-gradient(rgba(194, 94, 58, 0.15) 1px, transparent 1px) !important;
+}
+
+/* ------------------------------------------------------------
+   4. GENERAL MOTION & RESPONSIVE DRIFT REFINEMENTS
+   ------------------------------------------------------------ */
+
+/* Premium mobile drawer expand animation */
+.lg\:hidden.border-t.bg-bg-white {
+  animation: mobile-drawer-slide 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top;
+}
+
+@keyframes mobile-drawer-slide {
+  from {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 
 
