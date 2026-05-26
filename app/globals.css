@@ -144,7 +144,7 @@
   /* 3. Text tokens */
   --color-text-primary: #F1F5F9;
   --color-text-secondary: #94A3B8;
-  --color-text-muted: #64748B;
+  --color-text-muted: #8496AE;
   --color-text-inverse: #020812;
   --color-link: #38BDF8;
   --color-link-hover: #F97316;
@@ -243,7 +243,7 @@
   /* 3. Text tokens */
   --color-text-primary: #1B2A32; /* deep graphite / blue-green */
   --color-text-secondary: #5A676E; /* muted gray-green secondary text */
-  --color-text-muted: #7E8C94; /* sophisticated gray-green muted */
+  --color-text-muted: #5B6972; /* sophisticated gray-green muted */
   --color-text-inverse: #FAF8F5;
   --color-link: #11252D;
   --color-link-hover: #C25E3A;
